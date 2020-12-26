@@ -6,7 +6,7 @@ def main():
         edited = False
         edit_name = file_name
         for char in edit_name:
-            if char > '\uffff':
+            if ord(char) > 128:
                 edit_name = edit_name.replace(char,'')
                 edited = True
         if edited:
